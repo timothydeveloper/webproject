@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <title>Contact</title>
+    <link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&amp;family=Montserrat:wght@300;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <style>
+       * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background: url('https://bflgroup.ae/wp-content/uploads/2018/10/Abstract-Background-White.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+        header {
+            display: flex;
+            align-items: top;
+            padding: 33px 30px;
+            background-color: rgb(0, 0, 0);
+            color: white;
+            margin: 0%;
+            box-shadow: black;
+        }
+        .logo {
+            font-size: 1.3rem;
+            font-weight: 800;
+        }
+
+        .logo a {
+            color: #fff;
+            text-decoration: none;
+        }
+        header .menu-icon, header .title {
+            font-size: 80px;
+        }
+        .social {
+            position: absolute; 
+            top: 0; 
+            right: 20%; 
+            display: flex;
+            justify-content: flex-end; 
+            align-items: center;
+            background-color: transparent;
+            flex-wrap: wrap;
+            gap: 1.4rem;
+            padding: 1.7rem 1rem;
+        }
+
+        .social a {
+            color: rgb(255, 255, 255);
+            font-size: 1rem;
+            border: 1.6px solid rgb(80, 117, 32);
+            border-radius: 50%;
+            padding: .90rem;
+            text-align: center;
+            width: 50px;
+        }
+
+        .social a:hover {
+            color: #000000;
+            background-color: rgb(80, 117, 32);
+            box-shadow: 0 0 20px rgb(80, 117, 32);
+            transition: all .3s ease-in-out;
+        }
+        .bar-brand {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            margin: 0;
+            margin-left: 5%;
+        }
+        .bar-brand h2 {
+            font-style: Arial (sans-serif);
+            font-size: 25px;
+            text-shadow: 3px 3px 12px rgb(80, 117, 32);
+        }
+        .content {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            position: absolute;
+            top: 25%;
+            left: 5%;
+        }
+        .content p {
+            font-style: Arial (sans-serif);
+            font-size: 30px;
+            padding: 30px;
+        }
+        .content h1 {
+            font-style: Arial (sans-serif);
+            font-size: 50px;
+            text-shadow: 3px 3px 12px rgb(80, 117, 32);
+        }
+        .intro {
+            max-width: 35%;
+            margin-right: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 2.8rem; 
+        }
+        .intro h1 {
+            margin: 15px 0; 
+            margin-left: 100px;
+        }
+        .sidebar {
+            height: 120%;
+            width: 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: black;
+            overflow-x: hidden;
+            transition: width 0.5s;
+            padding-top: 60px;
+        }
+        .sidebar a {
+            padding: 10px 15px;
+            text-decoration: none;
+            font-size: 20px;
+            color: white;
+            display: block;
+            transition: background-color 0.3s;
+        }
+        .sidebar a:hover {
+            background-color: #333;
+        }
+        #sidebarToggle {
+            display: none;
+        }
+        #sidebarToggle:checked + .sidebar {
+            width: 110px;
+            opacity: 50;
+        }
+        .toggle-btn {
+            font-size: 40px;
+            cursor: pointer;
+            color: white;
+            border: none;
+            padding: 20px 15px;
+            position: fixed;
+            top: 0px;
+            left: 10px;
+            z-index: 700;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9rem;
+            color: #000000;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%; 
+            z-index: 2;
+        }
+        @media only screen and (max-width: 480px) {
+        header {
+            padding: 0.7rem 1rem;
+        }
+
+        section {
+            margin: 1rem 1.5rem;
+        }
+    }
+    .p{
+        color: white;
+    }
+    .fade-in {
+  opacity: 0;
+  animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+
+    .container {
+      position: relative;
+      z-index: 2;
+      padding: 60px 20px;
+      max-width: 700px;
+      margin: 0 auto;
+      text-align: center;
+      animation: fadeIn 1.2s ease-in-out;
+      backdrop-filter: blur(8px);
+      border: 1px solid rgb(104, 151, 41);
+      border-radius: 16px;
+    }
+
+    h1 {
+      font-size: 3.2rem;
+      font-weight: 700;
+      margin-bottom: 30px;
+      color: rgb(0, 0, 0);
+    }
+
+    h1:hover {
+      text-shadow: 0 0 15px rgb(80, 117, 32),
+                   0 0 30px rgb(94, 138, 37);
+      transition: text-shadow 0.3s ease, filter 0.3s ease;
+      filter: brightness(1.2);
+    }
+
+    .contact-info {
+      font-size: 1.1rem;
+      font-weight: 300;
+      line-height: 2.2;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      margin-bottom: 40px;
+    }
+
+    .contact-info a {
+      color: rgb(0, 0, 0);
+      text-decoration: none;
+      transition: text-shadow 0.3s, transform 0.3s;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      justify-content: center;
+    }
+
+    .contact-info a:hover,
+    .contact-info a:focus {
+      text-shadow: 0 0 8px rgb(80, 117, 32);
+      transform: translateY(-3px);
+      outline: none;
+    }
+
+    .contact-info i {
+      font-size: 1.4rem;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      text-align: left;
+    }
+
+    input, textarea {
+      padding: 10px 15px;
+      font-family: inherit;
+      font-size: 1rem;
+      border: none;
+      border-radius: 8px;
+      background: white(255, 255, 255, 0.1);
+      color: black;
+      backdrop-filter: blur(6px);
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+      color: #000000;
+    }
+
+    input:focus,
+    textarea:focus {
+      outline: 2px solid rgb(80, 117, 32);
+    }
+
+    button {
+      padding: 12px 20px;
+      background: white;
+      color: black;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px rgb(80, 117, 32);
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    </style>
+</head>
+<body class="fade-in">
+    <header>     
+        <label for="sidebarToggle" class="toggle-btn">≡</label>
+        <section class="bar-brand">
+            <h2>Web Project</h2>
+            <div class="social">
+                <a href="https://github.com/timothydeveloper"><i class="bi bi-github"></i></a>                                                                                                                                         
+                <a href="https://www.facebook.com/kape.tayohehe.18"><i class="bi bi-facebook"></i></a>
+                <a href="https://www.instagram.com/tmthylzrdo18/"><i class="bi bi-instagram"></i></a> 
+                <a href="mailto:ttolentino0621qc@student.fatima.edu.ph"><i class="bi bi-envelope-fill"></i></a>
+            </div>
+        </section>
+        <input type="checkbox" id="sidebarToggle">
+        <div class="sidebar">
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <a href="index.html">Home</a>
+            <br>
+            <a href="about.html">About</a>
+            <br>
+            <a href="portfolio.html">Portfolio</a>
+            <br>
+            <a href="contact.html">Contact</a>
+        </div>
+    </header>
+<div class="container">
+    <h1>CONTACT</h1>
+
+    <div class="contact-info" aria-label="Contact details">
+      <a href="mailto:mailto:ttolentino0621qc@student.fatima.edu.ph">
+        <i class="fas fa-envelope"></i> ttolentino0621qc@student.fatima.edu.ph
+      </a>
+      <a href="https://www.instagram.com/tmthylzrdo18/" target="_blank">
+        <i class="fab fa-facebook"></i> Timothy Lizardo
+      </a>
+      <a href="https://www.instagram.com/tmthylzrdo18/" target="_blank">
+        <i class="fab fa-instagram"></i> @tmthylzrdo18
+      </a>
+      <a href="tel:+639911905498">
+        <i class="fas fa-phone"></i> +63 991 190 5498
+      </a>
+    </div>
+
+    <form aria-label="Contact form">
+      <input type="text" placeholder="Your Name" aria-label="Your Name" required="">
+      <input type="email" placeholder="Your Email" aria-label="Your Email" required="">
+      <textarea rows="5" placeholder="Your Message" aria-label="Your Message" required=""></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+ 
+</body>
+
+<footer>
+    &copy; 2025 Timothy. All rights reserved.
+</footer>
+</html>

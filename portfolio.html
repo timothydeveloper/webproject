@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <title>My Resume</title>
+    <style>
+       * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background: url('https://bflgroup.ae/wp-content/uploads/2018/10/Abstract-Background-White.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+        header {
+            display: flex;
+            align-items: top;
+            padding: 33px 30px;
+            background-color: rgb(0, 0, 0);
+            color: white;
+            margin: 0%;
+            box-shadow: black;
+        }
+        header .menu-icon, header .title {
+            font-size: 80px;
+        }
+        .social {
+            position: absolute; 
+            top: 0; 
+            right: 20%; 
+            display: flex;
+            justify-content: flex-end; 
+            align-items: center;
+            background-color: transparent;
+            flex-wrap: wrap;
+            gap: 1.4rem;
+            padding: 1.7rem 1rem;
+        }
+
+        .social a {
+            color: #ffffff;
+            font-size: 1rem;
+            border: 1.6px solid rgb(80, 117, 32);
+            border-radius: 50%;
+            padding: .90rem;
+            text-align: center;
+            width: 30px;
+        }
+
+        .social a:hover {
+            color: #000000;
+            background-color: rgb(80, 117, 32);
+            box-shadow: 0 0 20px rgb(80, 117, 32);
+            transition: all .3s ease-in-out;
+        }
+        .bar-brand {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            margin: 0;
+            margin-left: 5%;
+        }
+        .bar-brand h2 {
+            font-style: Arial (sans-serif);
+            font-size: 25px;
+            text-shadow: 3px 3px 12px rgb(80, 117, 32);
+            color: #ffffff;
+        }
+        .content {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            position: absolute;
+            top: 25%;
+            left: 5%;
+        }
+        .content p {
+            font-style: Arial (sans-serif);
+            font-size: 30px;
+            padding: 30px;
+        }
+        .content h1 {
+            font-style: Arial (sans-serif);
+            font-size: 50px;
+            text-shadow: 3px 3px 12px rgb(80, 117, 32);
+        }
+        .intro {
+            max-width: 35%;
+            margin-right: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 2.8rem; 
+        }
+        .intro h1 {
+            margin: 15px 0; 
+            margin-left: 100px;
+        }
+        .sidebar {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: black;
+            overflow-x: hidden;
+            transition: width 0.5s;
+            padding-top: 60px;
+        }
+        .sidebar a {
+            padding: 10px 15px;
+            text-decoration: none;
+            font-size: 20px;
+            color: white;
+            display: block;
+            transition: background-color 0.3s;
+        }
+        .sidebar a:hover {
+            background-color: #333;
+        }
+        #sidebarToggle {
+            display: none;
+        }
+        #sidebarToggle:checked + .sidebar {
+            width: 110px;
+            opacity: 50;
+        }
+        .toggle-btn {
+            font-size: 40px;
+            cursor: pointer;
+            color: white;
+            border: none;
+            padding: 20px 15px;
+            position: fixed;
+            top: 0px;
+            left: 10px;
+            z-index: 700;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9rem;
+            color: #000000;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%; 
+            z-index: 2;
+        }
+        @media only screen and (max-width: 480px) {
+        header {
+            padding: 0.7rem 1rem;
+        }
+
+        section {
+            margin: 1rem 1.5rem;
+        }
+    }
+    .p{
+        color: white;
+    }
+    .fade-in {
+  opacity: 0;
+  animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+    .center-image {
+        display: block;
+        margin: 20px auto;
+        width: 200px;
+    }
+    h1, h2{
+        color: rgb(0, 0, 0);
+        text-align: center;
+        text-shadow: rgb(80, 117, 32);
+    }
+    .scroll-top-btn {
+        position: fixed;
+        bottom: 40px;
+        right: 40px;
+        font-size: 24px;
+        background-color: rgb(44, 63, 18);
+        color: white;
+        text-decoration: none;
+        padding: 12px 16px;
+        border-radius: 50%;
+        box-shadow: 0 4px 8px rgb(80, 117, 32);
+        display: none;
+    }
+
+    body:has(:target) .scroll-top-btn,
+    html:has(:target) .scroll-top-btn {
+        display: block;
+    }
+    .scroll-top-btn {
+        display: block; 
+    }
+
+    .scroll-top-btn:hover {
+        background-color: rgb(44, 63, 18);
+    }
+
+    </style>
+</head>
+<body class="fade-in">
+<header>
+    
+    <label for="sidebarToggle" class="toggle-btn">≡</label>
+    <section class="bar-brand">
+        <h2>Web Project</h2>
+        <div class="social">
+            <a href="https://github.com/timothydeveloper"><i class="bi bi-github"></i></a>                                                                                                                                         
+            <a href="https://www.facebook.com/kape.tayohehe.18"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.instagram.com/tmthylzrdo18/"><i class="bi bi-instagram"></i></a> 
+            <a href="mailto:ttolentino0621qc@student.fatima.edu.ph"><i class="bi bi-envelope-fill"></i></a>
+        </div>
+    </section>
+    <input type="checkbox" id="sidebarToggle">
+    <div class="sidebar">
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a href="index.html">Home</a>
+        <br>
+        <a href="about.html">About</a>
+        <br>
+        <a href="portfolio.html">Portfolio</a>
+        <br>
+        <a href="contact.html">Contact</a>
+    </div>
+</header>
+<h1>My Samples</h1>
+  <div class="image-holder">
+  <br>
+  <h2>Programming Sample</h2>
+  <img src="image/programming.jpg" alt="programming" style="display: block; margin: 20px auto; width: 700px; height: auto;">
+  <br>
+  <h2>Circuit design and testing</h2>
+  <img src="image/Circuit.jpg" alt="programming" style="display: block; margin: 20px auto; width: 700px; height: auto;">
+  <br>
+  <h2>Web Sample</h2>
+  <img src="image/Web.jpg" alt="programming" style="display: block; margin: 20px auto; width: 700px; height: auto;">
+  <br>
+  <h2>Technical Sample</h2>
+  <img src="image/flowchart.drawio.png" alt="programming" style="display: block; margin: 20px auto; width: 700px; height: auto;">
+</div>
+
+
+<a href="#top" class="scroll-top-btn">↑</a>
+<footer>
+    &copy; 2025 Timothy. All rights reserved.
+</footer>
+</body>
+</html>

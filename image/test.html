@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medieval Kingdom</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap');
+        
+        body {
+            font-family: 'MedievalSharp', cursive;
+            background: url('https://images.unsplash.com/photo-1553986782-9f6de60b51b4?q=80&w=1449&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center;
+            background-size: cover;
+            color: #f4e1c1;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .banner {
+            background: url('medieval-banner.jpg') no-repeat center;
+            background-size: cover;
+            color: #ffd700;
+            font-size: 4rem;
+            padding: 50px;
+            border-bottom: 10px solid #8b0000;
+            text-shadow: 4px 4px 10px black;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+        nav {
+            background-color: #5a2a0c;
+            padding: 15px 0;
+            border-bottom: 5px solid gold;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 20px;
+        }
+        nav ul li a {
+            color: #ffd700;
+            text-decoration: none;
+            font-size: 1.5rem;
+            padding: 12px 20px;
+            border: 3px solid transparent;
+            transition: all 0.3s ease-in-out;
+        }
+        nav ul li a:hover {
+            color: #8b0000;
+            background: gold;
+            border-radius: 10px;
+            border: 3px solid #8b0000;
+            text-shadow: 2px 2px 5px black;
+        }
+        main {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 30px;
+            border: 7px double gold;
+            background: rgba(255, 255, 255, 0.15);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+            border-radius: 15px;
+        }
+        footer {
+            background-color: #5a2a0c;
+            color: gold;
+            padding: 20px;
+            font-size: 1.2rem;
+            margin-top: 30px;
+            border-top: 5px solid gold;
+        }
+        header {
+            color: black;
+            padding: 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header .menu-icon {
+            font-size: 80px;
+        }
+        header .title {
+            font-size: 80px;
+        }
+        .content {
+            display: flex;
+            align-items: flex-start; /* Aligns content to the top */
+            justify-content: space-between;
+            padding: 50px;
+        }
+        h1 {
+            font-size: 3rem;
+            text-shadow: 3px 3px 12px black;
+        }
+        .intro {
+            max-width: 60%;
+            margin-right: 20px; /* Adds space to the right of the text */
+        }
+        .intro h1 {
+            margin: 50px 0; /* Adds margin to the top and bottom of the heading */
+            margin-left: 100px;
+        }
+        .intro button {
+            background-color: black;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: auto; /* Adds space between the button and other elements */
+            margin-left: 100px;
+            margin-bottom: 90px;
+        }                           
+        .sidebar {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: black;
+            overflow-x: hidden;
+            transition: width 0.5s;
+            padding-top: 60px;
+        }
+        .sidebar a {
+            padding: 10px 15px;
+            text-decoration: none;
+            font-size: 20px;
+            color: white;
+            display: block;
+            transition: background-color 0.3s;
+        }
+        .sidebar a:hover {
+            background-color: #333;
+        }
+        #sidebarToggle {
+            display: none;
+        }
+        #sidebarToggle:checked + .sidebar {
+            width: 140px;
+        }
+        .toggle-btn {
+            font-size: 20px;
+            cursor: pointer;
+            background-color: black;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            z-index: 700;
+        }
+.main-content {
+    margin-left: 220px; /* Adjusts the main content placement to accommodate the sidebar */
+    padding: 20px;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="sidebar">
+            <a href="index.html">🏰 Home</a>
+            <a href="about.html">📜 About</a>
+            <a href="gallery.html">🎨 Gallery</a>
+            <a href="contact.html">📬 Contact</a>
+            <a href="legends.html">📖 Legends</a>
+        </div>
+    
+        <div class="main-content">
+            <header>
+                <div class="banner">Medieval Kingdom</div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="legends.html">Legends</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <main>
+                <section>
+                    <h1>Contact</h1>
+                    <h2>Group 2 Members</h2>
+                    <p>Evora, Jamerick S.</p>
+                    <p>Tolentino, Timothy Louisse Allen L.</p>
+                    <p>Arcueno, Princess Abegail F.</p>
+                    <p>Jove, Hannah Angela C.</p>
+                    <p>Mitra, Mark David I.</p>
+                    <p>Calma, Khen Luigi S.</p>
+                </section>
+            </main>
+    <footer>
+        <p>&copy; 2025 Medieval Kingdom</p>
+    </footer>
+</body>
+</html>
